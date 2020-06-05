@@ -6,4 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".Choosing">
 
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="456dp"
+           android:background="@drawable/green_rectangle"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp">
+
+           <TextView
+               android:id="@+id/player_1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="6dp"
+               android:text="@string/player_1"
+               android:fontFamily="@font/aclonica"
+               android:textSize="34sp" />
+
+           <EditText
+               android:id="@+id/name_1"
+               android:layout_width="match_parent"
+               android:layout_height="52dp"
+               android:layout_below="@id/player_1"
+               android:layout_marginStart="6dp"
+               android:layout_marginTop="18dp"
+               android:layout_marginEnd="6dp"
+               android:background="@drawable/white_rectangle"
+               android:fontFamily="@font/almendra_display"
+               android:hint="@string/enter_name"
+               android:textColor="#000000"
+               android:textColorHint="#000000" />
+
+           <ImageButton
+               android:id="@+id/choose_cross"
+               android:layout_width="88dp"
+               android:layout_height="88dp"
+               android:layout_below="@id/name_1"
+               android:layout_marginStart="70dp"
+               android:layout_marginTop="28dp"
+               android:background="@drawable/grey_rectangle"
+               android:src="@drawable/cross" />
+
+           <ImageButton
+               android:id="@+id/choose_circle"
+               android:layout_width="88dp"
+               android:layout_height="88dp"
+               android:layout_below="@id/name_1"
+               android:layout_alignParentEnd="true"
+               android:layout_marginTop="28dp"
+               android:layout_marginEnd="70dp"
+               android:background="@drawable/grey_rectangle"
+               android:src="@drawable/circle" />
+
+           <TextView
+               android:id="@+id/player_2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/choose_cross"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="26dp"
+               android:text="@string/player_2"
+               android:fontFamily="@font/aclonica"
+               android:textSize="34sp" />
+
+           <EditText
+               android:id="@+id/name_2"
+               android:layout_width="match_parent"
+               android:layout_height="52dp"
+               android:layout_below="@id/player_2"
+               android:layout_marginStart="6dp"
+               android:layout_marginTop="18dp"
+               android:layout_marginEnd="6dp"
+               android:background="@drawable/white_rectangle"
+               android:fontFamily="@font/almendra_display"
+               android:hint="@string/enter_name"
+               android:textColorHint="#000000"
+               android:textColor="#000000"/>
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true"
+               android:background="@drawable/grey_rectangle_2"
+               android:text="@string/start"/>
+
+
+
+
+       </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
