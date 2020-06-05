@@ -4,41 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/black_rectangle">
+    android:background="@drawable/black_rectangle"
+    tools:context=".MainActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:background="@drawable/orange_rectangle"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginTop="6dp">
+        android:background="@drawable/orange_rectangle"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textSize="34sp"
-            android:text="@string/tic_tac_toe"/>
+            android:text="@string/tic_tac_toe"
+            android:textSize="34sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="12dp"
-            android:src="@drawable/back_arrow"/>
+            android:src="@drawable/back_arrow" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="12dp"
-            android:src="@drawable/more_vert_24"/>
+            android:src="@drawable/more_vert_24" />
 
 
     </RelativeLayout>
@@ -47,10 +47,10 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="380dp"
-        android:background="@drawable/orange_rectangle"
-        android:columnCount="5"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="6dp"
+        android:background="@drawable/orange_rectangle"
+        android:columnCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -61,121 +61,121 @@
             android:id="@+id/line_1_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="0"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="1"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
-            android:layout_marginTop="12dp"
             android:layout_marginLeft="12dp"
-            android:src="@drawable/cross"
-            android:background="@drawable/grey_rectangle"/>
+            android:layout_marginTop="12dp"
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/cross" />
 
         <ImageButton
             android:id="@+id/line_1_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="0"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="2"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
         <ImageButton
             android:id="@+id/line_1_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="0"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="3"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
         <ImageButton
             android:id="@+id/line_2_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="1"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="1"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginLeft="12dp"
-            android:src="@drawable/cross"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/cross" />
 
         <ImageButton
             android:id="@+id/line_2_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="1"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="2"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
         <ImageButton
             android:id="@+id/line_2_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="1"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="3"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginRight="12dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
         <ImageButton
             android:id="@+id/line_3_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="2"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="1"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
-            android:layout_marginBottom="12dp"
             android:layout_marginLeft="12dp"
-            android:src="@drawable/cross"
-            android:background="@drawable/grey_rectangle"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/cross" />
 
         <ImageButton
             android:id="@+id/line_3_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="2"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="2"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginBottom="12dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
         <ImageButton
             android:id="@+id/line_3_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_rowWeight="1"
             android:layout_row="2"
-            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_column="3"
+            android:layout_columnWeight="1"
             android:layout_margin="6dp"
-            android:layout_marginBottom="12dp"
             android:layout_marginRight="12dp"
-            android:src="@drawable/circle"
-            android:background="@drawable/grey_rectangle"/>
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/grey_rectangle"
+            android:src="@drawable/circle" />
 
 
     </GridLayout>
@@ -183,11 +183,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:background="@drawable/orange_rectangle"
         android:layout_margin="6dp"
+        android:background="@drawable/orange_rectangle"
+        app:layout_constraintBottom_toTopOf="@id/player_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/player_1">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
@@ -214,11 +214,11 @@
         android:id="@+id/player_1"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:background="@drawable/orange_rectangle"
         android:layout_margin="6dp"
+        android:background="@drawable/orange_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
@@ -240,7 +240,6 @@
             android:src="@drawable/circle" />
 
     </RelativeLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
