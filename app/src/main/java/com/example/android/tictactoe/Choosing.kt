@@ -20,14 +20,14 @@ class Choosing : AppCompatActivity() {
         }
     }
 
-     fun player1Name(): String {
+         fun player1Name(): String {
 
-        val player1 : EditText = findViewById(R.id.name_1)
+             val player1: EditText = findViewById(R.id.name_1)
 
-        val name1 : String = player1.text.toString()
+             val name1: String = player1.text.toString()
 
-        return name1
-    }
+             return name1
+         }
 
     fun player1click(): Int {
 
