@@ -6,4 +6,6 @@
     <string name="player_2">Player 2</string>
     <string name="start">Start</string>
     <string name="an_app_by">An App by</string>
+    <string name="cross">cross</string>
+    <string name="circle">circle</string>
 </resources>

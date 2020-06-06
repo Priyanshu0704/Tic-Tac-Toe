@@ -1,6 +1,6 @@
 package com.example.android.tictactoe
 
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -12,57 +12,92 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val player1Name : String? = player1Name()
-        val player2Name : String? = player2Name()
-        val choose : Int = player1click()
+        /*
+        * getting the name of player 1 and 2 from activity choosing
+        * getting player choice from activity choosing
+         */
+        val name1 : TextView = findViewById(R.id.name_1)
+        val name2 : TextView = findViewById(R.id.name_2)
+        val chose1 : ImageView = findViewById(R.id.img_1)
+        val chose2 : ImageView = findViewById(R.id.img_2)
 
-        val start : Button = findViewById(R.id.start)
-        start.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+        //for using function from Choosing class
+        val choose = Choosing()
+
+        val setName1 : String = choose.player1Name()
+        name1.text = setName1
+
+        val setName2 : String = choose.player2Name()
+        name2.text = setName2
+
+        val setSymbol : Int = choose.player1click()
+        if (setSymbol == 1){
+            chose1.setImageResource(R.drawable.cross)
+            chose2.setImageResource(R.drawable.circle)
         }
 
-    }
-
-    fun player1Name(): String? {
-
-        val player1: EditText = findViewById(R.id.name_1)
-
-        val name1: String = player1.text.toString()
-
-        return name1
-    }
-
-    fun player1click(): Int {
-
-        var i  = 0
-
-        val player1Cross : ImageButton = findViewById(R.id.choose_cross)
-
-        val player1Circle : ImageButton = findViewById(R.id.choose_circle)
-
-        player1Cross.setOnClickListener {
-            Toast.makeText(this,"you selected cross",Toast.LENGTH_SHORT).show()
-            i = 1
-            player1Circle.isEnabled = false
-            player1Circle.isClickable = false
+        else{
+            chose1.setImageResource(R.drawable.circle)
+            chose2.setImageResource(R.drawable.cross)
         }
 
-        player1Circle.setOnClickListener {
-            Toast.makeText(this,"you selected circle",Toast.LENGTH_SHORT).show()
-            i = 2
-            player1Cross.isEnabled = false
-            player1Cross.isClickable = false
+
+        val image11 : ImageButton = findViewById(R.id.line_1_1)
+
+        image11.setOnClickListener {
+
         }
-         return i
-    }
 
-    fun player2Name(): String? {
+        val image12 : ImageButton = findViewById(R.id.line_1_2)
 
-        val player2: EditText = findViewById(R.id.name_1)
+        image12.setOnClickListener {
 
-        val name2: String = player2.text.toString()
+        }
 
-        return name2
+        val image13 : ImageButton = findViewById(R.id.line_1_3)
+
+        image13.setOnClickListener {
+
+        }
+
+        val image21 : ImageButton = findViewById(R.id.line_2_1)
+
+        image21.setOnClickListener {
+
+        }
+
+        val image22 : ImageButton = findViewById(R.id.line_2_2)
+
+        image22.setOnClickListener {
+
+        }
+
+
+        val image23 : ImageButton = findViewById(R.id.line_2_3)
+
+        image23.setOnClickListener {
+
+        }
+
+        val image31 : ImageButton = findViewById(R.id.line_3_1)
+
+        image31.setOnClickListener {
+
+        }
+
+        val image32 : ImageButton = findViewById(R.id.line_3_2)
+
+        image32.setOnClickListener {
+
+        }
+
+
+        val image33 : ImageButton = findViewById(R.id.line_3_3)
+
+        image33.setOnClickListener {
+
+        }
+
     }
 
 
