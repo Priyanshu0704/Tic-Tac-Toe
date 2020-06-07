@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
      var setSymbol : Int = 0
      var setName1 : String? = null
      var setName2 : String? = null
-     private val SHARE_URL = "https://covidtracker48.page.link/downlaod"
+     private val SHARE_URL = "https://bit.ly/priyanshu_tictactoe"
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -42,12 +42,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun shareApp(){
-        /*val messageText = "Enjoy the fee TIC TAC TOE game with friends"+ SHARE_URL
+        val messageText = "Enjoy the fee TIC TAC TOE game with friends $SHARE_URL"
         val sendIntent = Intent(Intent.ACTION_SEND)
         sendIntent.putExtra(Intent.EXTRA_TEXT, messageText)
         sendIntent.type = "text/plain"
         val shareIntent = Intent.createChooser(sendIntent, "Share the App using")
-        startActivity(shareIntent)*/
+        startActivity(shareIntent)
         Toast.makeText(this, "feature coming soon", Toast.LENGTH_SHORT).show()
     }
 
