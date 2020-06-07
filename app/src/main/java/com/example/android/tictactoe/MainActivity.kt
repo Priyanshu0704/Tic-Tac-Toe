@@ -6,15 +6,22 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageButton
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
      private lateinit var arr : Array<IntArray>
+     private var steps: Int = 0
+     var setSymbol : Int = 0
+     var setName1 : String? = null
+     var setName2 : String? = null
+     private val SHARE_URL = "https://covidtracker48.page.link/downlaod"
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
@@ -33,17 +40,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun shareApp(){
-        val messageText = "Enjoy the fee TIC TAC TOE game with friends"
+        /*val messageText = "Enjoy the fee TIC TAC TOE game with friends"+ SHARE_URL
         val sendIntent = Intent(Intent.ACTION_SEND)
         sendIntent.putExtra(Intent.EXTRA_TEXT, messageText)
         sendIntent.type = "text/plain"
         val shareIntent = Intent.createChooser(sendIntent, "Share the App using")
-        startActivity(shareIntent)
+        startActivity(shareIntent)*/
+        Toast.makeText(this, "feature coming soon", Toast.LENGTH_SHORT).show()
     }
 
     fun gitHubLink(){
         val repoLink =
-            Uri.parse("https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu")
+            Uri.parse("https://github.com/priyanshu-ui/Tic-Tac-Toe")
         val downloadApp = Intent(Intent.ACTION_VIEW,repoLink)
         if (downloadApp.resolveActivity(packageManager) != null) {
             startActivity(downloadApp)
@@ -73,15 +81,15 @@ class MainActivity : AppCompatActivity() {
 
         //TODO: Using intent.getStringExtra() function to get the player names from the starting
         //TODO: intent using the key
-        val setName1 : String? = intent.getStringExtra("p1")
+        setName1 = intent.getStringExtra("p1")
         name1.text = setName1
 
-        val setName2 : String? = intent.getStringExtra("p2")
+        setName2 = intent.getStringExtra("p2")
         name2.text = setName2
 
         //TODO: This code snippet has been commented just for the sake of testing purpose
         //TODO: and could be modified to work properly
-        val setSymbol : Int = intent.getIntExtra("c1",1)
+        setSymbol = intent.getIntExtra("c1",1)
         if (setSymbol == 1){
             chose1.setImageResource(R.drawable.cross)
             chose2.setImageResource(R.drawable.circle)
@@ -93,67 +101,135 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val image11 : ImageButton = findViewById(R.id.line_1_1)
+        val image11 :  TextView = findViewById(R.id.line_1_1)
 
         image11.setOnClickListener {
-
+            step(it,0,0)
         }
 
-        val image12 : ImageButton = findViewById(R.id.line_1_2)
+        val image12 :  TextView = findViewById(R.id.line_1_2)
 
         image12.setOnClickListener {
-
+            step(it,0,1)
         }
 
-        val image13 : ImageButton = findViewById(R.id.line_1_3)
+        val image13 : TextView = findViewById(R.id.line_1_3)
 
         image13.setOnClickListener {
-
+            step(it,0,2)
         }
 
-        val image21 : ImageButton = findViewById(R.id.line_2_1)
+        val image21 :  TextView = findViewById(R.id.line_2_1)
 
         image21.setOnClickListener {
-
+            step(it,1,0)
         }
 
-        val image22 : ImageButton = findViewById(R.id.line_2_2)
+        val image22 :  TextView = findViewById(R.id.line_2_2)
 
         image22.setOnClickListener {
-
+            step(it,1,1)
         }
 
 
-        val image23 : ImageButton = findViewById(R.id.line_2_3)
+        val image23 :  TextView = findViewById(R.id.line_2_3)
 
         image23.setOnClickListener {
-
+            step(it,1,2)
         }
 
-        val image31 : ImageButton = findViewById(R.id.line_3_1)
+        val image31 :  TextView = findViewById(R.id.line_3_1)
 
         image31.setOnClickListener {
-
+            step(it,2,0)
         }
 
-        val image32 : ImageButton = findViewById(R.id.line_3_2)
+        val image32 : TextView = findViewById(R.id.line_3_2)
 
         image32.setOnClickListener {
-
+            step(it,2,1)
         }
 
 
-        val image33 : ImageButton = findViewById(R.id.line_3_3)
+        val image33 :  TextView = findViewById(R.id.line_3_3)
 
         image33.setOnClickListener {
-            if (setName1 != null) {
-                dialogBoxAfterGame(1,setName1)
-            }
+            step(it,2,2)
         }
 
 
        arr = Array(3){ IntArray(3) }
     }
+
+
+    private fun step(v: View, row: Int, col: Int) {
+        val view: TextView = v as TextView
+        if ((view.text.toString()).isEmpty()) {
+            if (setSymbol == 1) {
+                when (steps % 2) {
+                    0 -> {
+
+                        view.text = " X"
+                        arr[row][col] = 1
+
+                    }
+                    else -> {
+                        view.text = " O"
+                        arr[row][col] = 2
+
+                    }
+                }
+                if (winCheck()) {
+
+                    dialogBoxAfterGame(
+                        1,
+                        when (view.text.toString()) {
+                            " X" -> setName1
+                            else -> setName2
+                        }!!
+                    )
+                    return
+                }
+            }
+                else {
+                    when (steps % 2) {
+                        0 -> {
+
+                            view.text = " O"
+                            arr[row][col] = 1
+
+                        }
+                        else -> {
+                            view.text = " X"
+                            arr[row][col] = 2
+
+                        }
+                    }
+                if (winCheck()) {
+
+                    dialogBoxAfterGame(
+                        1,
+                        when (view.text.toString()) {
+                            " X" -> setName2
+                            else -> setName1
+                        }!!
+                    )
+                    return
+                }
+                }
+            }
+
+            steps++
+
+        if (steps == 9) {
+            dialogBoxAfterGame(0)
+        }
+        }
+
+
+
+
+
 
     private fun winCheck(): Boolean {
         for (i in 0 until 3) {

@@ -14,5 +14,5 @@
     <string name="restart">Restart</string>
     <string name="exit">Exit</string>
     <string name="change_players">Change players</string>
-    <string name="link_to_githun_repo">link to GitHun repo</string>
+    <string name="link_to_github_repo">link to GitHub repo</string>
 </resources>

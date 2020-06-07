@@ -29,7 +29,7 @@
         android:id="@+id/link"
         android:icon="@android:drawable/ic_dialog_info"
         android:orderInCategory="4"
-        android:title="@string/link_to_githun_repo"
+        android:title="@string/link_to_github_repo"
         app:showAsAction="never" />
 
 </menu>
