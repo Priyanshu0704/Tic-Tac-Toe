@@ -7,4 +7,11 @@
         <item name="colorAccent">#F8BBD0</item>
     </style>
 
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#F06292</item>
+        <item name="colorPrimaryDark">#F8BBD0</item>
+        <item name="colorAccent">#EF0D5A</item>
+    </style>
+
 </resources>

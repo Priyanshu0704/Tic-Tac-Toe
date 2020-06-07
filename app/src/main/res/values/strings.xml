@@ -8,4 +8,11 @@
     <string name="an_app_by">An App by</string>
     <string name="cross">cross</string>
     <string name="circle">circle</string>
+    <string name="winner">Winner!</string>
+    <string name="game_drawn">Game Drawn</string>
+    <string name="share_app">Share App</string>
+    <string name="restart">Restart</string>
+    <string name="exit">Exit</string>
+    <string name="change_players">Change players</string>
+    <string name="link_to_githun_repo">link to GitHun repo</string>
 </resources>

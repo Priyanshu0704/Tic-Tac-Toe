@@ -10,24 +10,43 @@ class Choosing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choosing)
 
-        val player1Name : String = player1Name()
-        val player2Name : String = player2Name()
-        val choose : Int = player1click()
+
+
 
         val start : Button = findViewById(R.id.start)
         start.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            //TODO: Getting the names from the edittext and checkbox fields only when the play btn is pressed
+            if (player1Name().isNotEmpty() && player2Name().isNotEmpty()) {
+                val player1Name: String = player1Name()
+                val player2Name: String = player2Name()
+                val choose: Int = player1click()
+                Toast.makeText(this,"Player 1 starts first", Toast.LENGTH_SHORT).show()
+                //TODO: Creating an intent to start the main activity
+                val intent: Intent = Intent(Intent(this, MainActivity::class.java))
+                //TODO: Putting both player names in the intent to use in main activity in the
+                //TODO: way of key value pair, such that the we can get the values using their keys
+                //TODO: Here p1 and p2 are the key for the values
+                intent.putExtra("p1", player1Name)
+                intent.putExtra("p2", player2Name)
+                intent.putExtra("c1", choose)
+                startActivity(intent)
+            }
+
+            else {
+                Toast.makeText(this, "player names cannot be empty", Toast.LENGTH_SHORT).show()
+
+            }
         }
     }
 
-         fun player1Name(): String {
+    fun player1Name(): String {
 
-             val player1: EditText = findViewById(R.id.name_1)
+        val player1: EditText = findViewById(R.id.name_1)
 
-             val name1: String = player1.text.toString()
+        val name1: String = player1.text.toString()
 
-             return name1
-         }
+        return name1
+    }
 
     fun player1click(): Int {
 
@@ -55,7 +74,7 @@ class Choosing : AppCompatActivity() {
 
     fun player2Name(): String {
 
-        val player2: EditText = findViewById(R.id.name_1)
+        val player2: EditText = findViewById(R.id.name_2)
 
         val name2: String = player2.text.toString()
 

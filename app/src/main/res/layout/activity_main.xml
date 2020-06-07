@@ -8,40 +8,6 @@
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:background="#FFB74D"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="@string/tic_tac_toe"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="12dp"
-            android:src="@drawable/back_arrow" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/more_vert_24" />
-
-
-    </RelativeLayout>
-
-
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="380dp"
@@ -52,7 +18,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379">
 
 
         <ImageButton
@@ -67,8 +34,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginTop="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/cross" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_1_2"
@@ -81,8 +47,7 @@
             android:layout_margin="6dp"
             android:layout_marginTop="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_1_3"
@@ -96,8 +61,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_2_1"
@@ -110,8 +74,7 @@
             android:layout_margin="6dp"
             android:layout_marginLeft="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/cross" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_2_2"
@@ -123,8 +86,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_2_3"
@@ -137,8 +99,7 @@
             android:layout_margin="6dp"
             android:layout_marginRight="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_3_1"
@@ -152,8 +113,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginBottom="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/cross" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_3_2"
@@ -166,8 +126,7 @@
             android:layout_margin="6dp"
             android:layout_marginBottom="12dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
         <ImageButton
             android:id="@+id/line_3_3"
@@ -181,8 +140,7 @@
             android:layout_marginRight="12dp"
             android:scaleType="centerCrop"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/red_rectangle"
-            android:src="@drawable/circle" />
+            android:background="@drawable/red_rectangle" />
 
 
     </GridLayout>
