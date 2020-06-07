@@ -12,6 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toDrawable
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -95,57 +97,57 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val image11 :  TextView = findViewById(R.id.line_1_1)
+        val image11 :  ImageView = findViewById(R.id.line_1_1)
 
         image11.setOnClickListener {
             step(it,0,0)
         }
 
-        val image12 :  TextView = findViewById(R.id.line_1_2)
+        val image12 :  ImageView = findViewById(R.id.line_1_2)
 
         image12.setOnClickListener {
             step(it,0,1)
         }
 
-        val image13 : TextView = findViewById(R.id.line_1_3)
+        val image13 : ImageView = findViewById(R.id.line_1_3)
 
         image13.setOnClickListener {
             step(it,0,2)
         }
 
-        val image21 :  TextView = findViewById(R.id.line_2_1)
+        val image21 :  ImageView = findViewById(R.id.line_2_1)
 
         image21.setOnClickListener {
             step(it,1,0)
         }
 
-        val image22 :  TextView = findViewById(R.id.line_2_2)
+        val image22 : ImageView = findViewById(R.id.line_2_2)
 
         image22.setOnClickListener {
             step(it,1,1)
         }
 
 
-        val image23 :  TextView = findViewById(R.id.line_2_3)
+        val image23 : ImageView = findViewById(R.id.line_2_3)
 
         image23.setOnClickListener {
             step(it,1,2)
         }
 
-        val image31 :  TextView = findViewById(R.id.line_3_1)
+        val image31 : ImageView = findViewById(R.id.line_3_1)
 
         image31.setOnClickListener {
             step(it,2,0)
         }
 
-        val image32 : TextView = findViewById(R.id.line_3_2)
+        val image32 : ImageView = findViewById(R.id.line_3_2)
 
         image32.setOnClickListener {
             step(it,2,1)
         }
 
 
-        val image33 :  TextView = findViewById(R.id.line_3_3)
+        val image33 : ImageView = findViewById(R.id.line_3_3)
 
         image33.setOnClickListener {
             step(it,2,2)
@@ -153,22 +155,25 @@ class MainActivity : AppCompatActivity() {
 
 
        arr = Array(3){ IntArray(3) }
+
+
     }
 
 
+
     private fun step(v: View, row: Int, col: Int) {
-        val view: TextView = v as TextView
-        if ((view.text.toString()).isEmpty()) {
+        val view: ImageView = v as ImageView
+        if (view.drawable == null) {
             if (setSymbol == 1) {
                 when (steps % 2) {
                     0 -> {
 
-                        view.text = " X"
+                        view.setImageResource(R.drawable.cross)
                         arr[row][col] = 1
 
                     }
                     else -> {
-                        view.text = " O"
+                        view.setImageResource(R.drawable.circle)
                         arr[row][col] = 2
 
                     }
@@ -177,8 +182,8 @@ class MainActivity : AppCompatActivity() {
 
                     dialogBoxAfterGame(
                         1,
-                        when (view.text.toString()) {
-                            " X" -> setName1
+                        when (arr[row][col]) {
+                            1 -> setName1
                             else -> setName2
                         }!!
                     )
@@ -189,12 +194,12 @@ class MainActivity : AppCompatActivity() {
                     when (steps % 2) {
                         0 -> {
 
-                            view.text = " O"
+                            view.setImageResource(R.drawable.circle)
                             arr[row][col] = 1
 
                         }
                         else -> {
-                            view.text = " X"
+                            view.setImageResource(R.drawable.cross)
                             arr[row][col] = 2
 
                         }
@@ -203,8 +208,8 @@ class MainActivity : AppCompatActivity() {
 
                     dialogBoxAfterGame(
                         1,
-                        when (view.text.toString()) {
-                            " X" -> setName2
+                        when (arr[row][col]) {
+                            2 -> setName2
                             else -> setName1
                         }!!
                     )
@@ -281,7 +286,7 @@ class MainActivity : AppCompatActivity() {
         }
         builder.setNeutralButton(
             "Change Players"
-        ) { dialog: DialogInterface?, which: Int ->
+        ) { _: DialogInterface?, _: Int ->
             onBackPressed()
         }
         builder.setNegativeButton(

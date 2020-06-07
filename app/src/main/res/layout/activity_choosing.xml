@@ -45,6 +45,7 @@
                android:layout_marginTop="18dp"
                android:background="@drawable/white_rectangle"
                android:fontFamily="@font/caveat_brush"
+               android:textAlignment="center"
                android:hint="@string/enter_name"
                android:textColor="#000000"
                android:textColorHint="#000000" />
@@ -109,6 +110,7 @@
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                android:layout_marginTop="18dp"
+               android:textAlignment="center"
                android:background="@drawable/white_rectangle"
                android:fontFamily="@font/caveat_brush"
                android:hint="@string/enter_name"
