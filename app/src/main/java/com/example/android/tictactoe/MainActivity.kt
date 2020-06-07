@@ -72,15 +72,9 @@ class MainActivity : AppCompatActivity() {
         val chose1 : ImageView = findViewById(R.id.img_1)
         val chose2 : ImageView = findViewById(R.id.img_2)
 
-        //TODO: Getting the starting intent of the activity to get the player names. We used
-        //TODO: getIntent() function in java but in kotlin we just call intent to get the
-        //TODO: starting intent
-        val intent: Intent = intent
-        //TODO: Marking both Strings as String? as it shows that the name of the player could be
-        //TODO: null
 
-        //TODO: Using intent.getStringExtra() function to get the player names from the starting
-        //TODO: intent using the key
+        val intent: Intent = intent
+
         setName1 = intent.getStringExtra("p1")
         name1.text = setName1
 

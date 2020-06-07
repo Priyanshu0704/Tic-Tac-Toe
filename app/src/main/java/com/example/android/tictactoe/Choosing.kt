@@ -15,17 +15,15 @@ class Choosing : AppCompatActivity() {
 
         val start : Button = findViewById(R.id.start)
         start.setOnClickListener {
-            //TODO: Getting the names from the edittext and checkbox fields only when the play btn is pressed
+
             if (player1Name().isNotEmpty() && player2Name().isNotEmpty()) {
                 val player1Name: String = player1Name()
                 val player2Name: String = player2Name()
                 val choose: Int = player1click()
                 Toast.makeText(this,"Player 1 starts first", Toast.LENGTH_SHORT).show()
-                //TODO: Creating an intent to start the main activity
+
                 val intent: Intent = Intent(Intent(this, MainActivity::class.java))
-                //TODO: Putting both player names in the intent to use in main activity in the
-                //TODO: way of key value pair, such that the we can get the values using their keys
-                //TODO: Here p1 and p2 are the key for the values
+
                 intent.putExtra("p1", player1Name)
                 intent.putExtra("p2", player2Name)
                 intent.putExtra("c1", choose)

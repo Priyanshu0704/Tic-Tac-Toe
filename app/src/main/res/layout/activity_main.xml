@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.379">
 
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_1_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -31,12 +31,13 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="12dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_1_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -46,10 +47,12 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginTop="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_1_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -60,10 +63,12 @@
             android:layout_margin="6dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_2_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -73,10 +78,12 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginLeft="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_2_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -85,10 +92,12 @@
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_2_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -98,10 +107,12 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_3_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -112,10 +123,12 @@
             android:layout_margin="6dp"
             android:layout_marginLeft="12dp"
             android:layout_marginBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_3_2"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -125,10 +138,12 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:background="@drawable/red_rectangle" />
 
-        <ImageButton
+        <TextView
             android:id="@+id/line_3_3"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -138,6 +153,8 @@
             android:layout_columnWeight="1"
             android:layout_margin="6dp"
             android:layout_marginRight="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="98sp"
             android:scaleType="centerCrop"
             android:layout_marginBottom="12dp"
             android:background="@drawable/red_rectangle" />
